@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.example.hiltexample.R
@@ -25,16 +26,10 @@ class ResourcesActivity : AppCompatActivity() {
     lateinit var actAccentText: TextView
     lateinit var appPrimaryDarkText: TextView
     lateinit var actPrimaryDarkText: TextView
-    @Inject lateinit var viewModel: MainActivityViewModel
-    @Inject lateinit var viewModel2: MainActivityViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.resources_activity_layout)
         Log.i(com.example.hiltexample.di.dependencies.TAG, "name: $mainActivityName")
-        Log.d(com.example.hiltexample.di.dependencies.TAG, """
-            |isEqual: ${viewModel == viewModel2} 
-            |reference1: $viewModel, 
-            |reference2: $viewModel2""".trimMargin())
         appPrimaryText = findViewById(R.id.appColorPrimaryText)
         actPrimaryText = findViewById(R.id.activityColorPrimaryText)
         appAccentText = findViewById(R.id.appColorAccentText)

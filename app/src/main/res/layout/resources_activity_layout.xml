@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/appColorPrimaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="AppPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activityColorPrimaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="ActPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appColorAccentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="AppAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appColorPrimaryText" />
+
+    <TextView
+        android:id="@+id/activityColorAccentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ActAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appColorPrimaryText" />
+
+    <TextView
+        android:id="@+id/appColorSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AppSecondary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appColorPrimaryText" />
+
+    <TextView
+        android:id="@+id/activityColorSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ActSecondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appColorPrimaryText" />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="appColorAccentText, activityColorAccentText, appColorPrimaryText, activityColorPrimaryText, appColorSecondary, activityColorSecondary"
+        app:flow_horizontalGap="45dp"
+        app:flow_verticalGap="60dp"
+        android:padding="20dp"
+        app:flow_wrapMode="chain"
+        app:flow_maxElementsWrap="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
